@@ -17,7 +17,7 @@ import java.util.Optional;
 
 
 // Definición del Servlet que manejará la ruta /products
-@WebServlet("/products")
+@WebServlet("/productos")
 public class ProductoServlet extends HttpServlet {
 
     // Método para manejar solicitudes GET (cuando se accede a la página de productos)
@@ -52,7 +52,7 @@ public class ProductoServlet extends HttpServlet {
 
         // 6. Título principal de la página
         out.println("<h1>Lista de productos</h1>");
-        out.println("<h1> Hola usaurio "+ usernameOptional.get() +"</h1>");
+        out.println("<h1> Hola usuario "+ usernameOptional.get() +"</h1>");
         // 7. Crear tabla para mostrar los productos
         out.println("<table border='1'>");  // Tabla con borde visible
 

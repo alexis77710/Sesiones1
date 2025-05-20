@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 // Implementación de la interfaz ProductoService
-public class ProductosServiceImplement implements services.ProductoService {
+public class ProductosServiceImplement implements ProductoService {
 
     @Override
     public List<Productos> listar() {

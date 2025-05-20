@@ -23,9 +23,9 @@
         </div>
 
         <div>
-            <label for="pass">Password:</label>
+            <label for="password">Password:</label>
             <div>
-                <input type="password" name="pass" id="password" required>
+                <input type="password" name="password" id="password" required>
             </div>
         </div>
         <div>
