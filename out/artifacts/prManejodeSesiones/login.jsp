@@ -10,27 +10,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-<h1> Login de usuario</h1>
-<div>
+<div class="login-container">
+    <h1>Login de usuario</h1>
     <form action="login" method="post">
-        <div>
-            <label for="username">Nombre de usuarios:</label>
-            <div>
-                <input type="text" name="username" id="username" required>
-            </div>
-        </div>
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" name="username" id="username" required>
 
-        <div>
-            <label for="password">Password:</label>
-            <div>
-                <input type="password" name="password" id="password" required>
-            </div>
-        </div>
-        <div>
-            <input type="submit" value="Enviar">
-        </div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <input type="submit" value="Enviar">
     </form>
 </div>
 </body>
