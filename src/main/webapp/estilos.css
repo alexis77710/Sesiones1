@@ -1,129 +1,103 @@
-/* ===========================================
-   ESTILOS GLOBALES - CONFIGURACIÓN GENERAL
-   =========================================== */
-
+/* ============ ESTILOS GENERALES ============ */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna, legible */
-    background-color: #121212;  /* Fondo general oscuro (modo oscuro) */
-    margin: 0;                 /* Elimina espacio exterior predeterminado */
-    padding: 0;                /* Elimina espacio interior predeterminado */
-    color: #e0e0e0;            /* Texto en gris claro para buen contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 0 auto; /* Centrado horizontal con margen automático */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    color: #333; /* Color de texto principal (gris oscuro) */
+    max-width: 1200px; /* Ancho máximo del contenido */
+}
+.status-banner,
+.login-message,
+.welcome-message {
+    margin-bottom: 20px; /* Espacio inferior */
+    padding: 15px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Fondo gris claro */
 }
 
-/* ===========================================
-   TÍTULOS PRINCIPALES
-   =========================================== */
-
-h1 {
-    text-align: center;        /* Centrar el título */
-    margin-top: 30px;          /* Separación superior */
-    color: #90caf9;            /* Color azul claro (resalta en fondo oscuro) */
+.welcome-message {
+    color: #2c3e50; /* Texto azul oscuro */
 }
 
-/* ===========================================
-   MENÚ DE NAVEGACIÓN (barra superior)
-   =========================================== */
-
-.menu {
-    list-style: none;          /* Elimina viñetas predeterminadas */
-    padding: 0;                /* Quita el relleno interno */
-    margin: 30px auto;         /* Centra horizontalmente y agrega separación superior */
-    display: flex;             /* Usa Flexbox para organizar horizontalmente */
-    justify-content: center;   /* Centra los elementos del menú */
-    gap: 20px;                 /* Espaciado entre enlaces */
-    background-color: #1e1e1e; /* Fondo gris oscuro para el menú */
-    border-radius: 10px;       /* Bordes redondeados suaves */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6); /* Sombra sutil para profundidad */
-    max-width: 600px;          /* Limita el ancho máximo del menú */
+.login-message {
+    color: #7f8c8d; /* Texto gris */
 }
 
-.menu li a {
-    display: block;            /* Hace que todo el enlace sea clickeable */
-    padding: 12px 20px;        /* Espaciado interno del enlace */
-    text-decoration: none;     /* Quita el subrayado */
-    color: #90caf9;            /* Color del texto (azul claro) */
-    font-weight: 600;          /* Letra en negrita media */
-    border-radius: 8px;        /* Bordes suavizados */
-    transition: background 0.3s ease, color 0.3s ease; /* Transición suave en hover */
+.welcome .username {
+    font-weight: bold; /* Texto en negrita */
+    color: #2c3e50; /* Color azul oscuro */
+}
+.login-link,
+.login-message a,
+.return-link a {
+    color: #3498db; /* Azul brillante */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Efecto suave al pasar el mouse */
 }
 
-.menu li a:hover {
-    background-color: #37474f; /* Color de fondo al pasar el mouse (azul grisáceo) */
-    color: #ffffff;            /* Texto blanco al pasar el mouse */
+.login-link:hover,
+.login-message a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.nav-button,
+.return-link a {
+    display: inline-block; /* Permite padding y márgenes */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #3498db; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
 }
 
-/* ===========================================
-   FORMULARIO DE LOGIN - CONTENEDOR
-   =========================================== */
-
-.login-container {
-    width: 360px;                /* Ancho del formulario */
-    margin: 50px auto;           /* Centrado con margen vertical */
-    padding: 30px;               /* Relleno interno */
-    background: #1e1e1e;         /* Fondo oscuro del formulario */
-    border-radius: 12px;         /* Bordes redondeados */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Sombra pronunciada */
+.nav-button:hover,
+.return-link a:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+}
+.product-table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Bordes de celdas unidos (sin espacio) */
+    margin: 20px 0; /* Margen superior e inferior */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
-/* ===========================================
-   FORMULARIO DE LOGIN - CAMPOS Y BOTÓN
-   =========================================== */
-
-.login-container form {
-    display: flex;              /* Usa flexbox */
-    flex-direction: column;     /* Apila verticalmente */
+.product-table th {
+    background-color: #3498db; /* Fondo azul para encabezados */
+    color: white; /* Texto blanco */
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alineación izquierda */
 }
 
-.login-container label {
-    margin-top: 15px;           /* Espaciado superior entre campos */
-    font-size: 15px;            /* Tamaño de letra estándar */
-    color: #bbdefb;             /* Azul claro para destacar las etiquetas */
+.product-table td {
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Borde inferior gris */
 }
 
-.login-container input[type="text"],
-.login-container input[type="password"] {
-    padding: 10px;              /* Relleno interno */
-    margin-top: 6px;            /* Espacio entre etiqueta e input */
-    border: 1px solid #546e7a;  /* Borde gris-azulado */
-    border-radius: 6px;         /* Bordes redondeados */
-    font-size: 14px;            /* Tamaño de texto */
-    background-color: #263238;  /* Fondo de campo más oscuro */
-    color: #ffffff;             /* Texto blanco dentro del input */
-    outline: none;              /* Quitar contorno por defecto al enfocar */
+.product-table tr:hover {
+    background-color: #f5f5f5; /* Fondo gris claro al pasar el mouse */
+}
+.price-cell,
+.price {
+    text-align: right; /* Alineación derecha (para precios) */
+    font-family: 'Courier New', monospace; /* Fuente monoespaciada (para números) */
 }
 
-.login-container input[type="submit"] {
-    margin-top: 20px;           /* Separación superior del botón */
-    padding: 12px;              /* Espaciado interno del botón */
-    background-color: #1565c0;  /* Azul medio (color de acción) */
-    color: white;               /* Texto blanco */
-    border: none;               /* Sin borde por defecto */
-    border-radius: 6px;         /* Bordes redondeados */
-    font-weight: bold;          /* Letra en negrita */
-    cursor: pointer;            /* Cambia el cursor al pasar el mouse */
-    transition: background 0.3s ease; /* Transición suave */
+.price {
+    color: #27ae60; /* Verde para precios */
+    font-weight: bold; /* Negrita */
 }
 
-.login-container input[type="submit"]:hover {
-    background-color: #0d47a1;  /* Azul más oscuro al pasar el mouse */
+.price-mask {
+    color: #95a5a6; /* Gris para precios ocultos */
+    letter-spacing: 2px; /* Espaciado entre caracteres (***) */
 }
 
-/* ===========================================
-   RESPONSIVE DESIGN (Diseño adaptable)
-   =========================================== */
-
-@media (max-width: 480px) {
-    .login-container {
-        width: 90%;            /* Más ancho en pantallas pequeñas */
-    }
-
-    .menu {
-        flex-direction: column;  /* Apila enlaces verticalmente */
-        align-items: center;     /* Centra los ítems */
-    }
-
-    .menu li {
-        width: 100%;             /* Ancho completo por enlace */
-        text-align: center;      /* Centra el texto */
-    }
+.price-mask:hover {
+    color: #3498db; /* Azul al pasar el mouse */
+}
+.page-navigation,
+.return-link {
+    margin-top: 30px; /* Margen superior */
+    text-align: center; /* Centrado horizontal */
 }

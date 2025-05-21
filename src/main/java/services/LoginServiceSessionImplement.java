@@ -14,7 +14,7 @@ public class LoginServiceSessionImplement implements LoginService {
         String username = (String)session.getAttribute("username");
         /*creo una condicion en la cual valido si al obtener el nombre del usuario es distinto de nulo
         - obtengo el username
-        - caso contrario decuelvo la sesion vacia */
+        - caso contrario devuelvo la sesion vacia */
         if(username!=null){
             return Optional.of(username);
         }

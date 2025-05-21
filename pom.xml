@@ -41,7 +41,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <username>admin</username>
-                    <password>erick02</password>
+                    <password>1234</password>
                 </configuration>
             </plugin>
             <plugin>
