@@ -1,120 +1,103 @@
-/* ===========================
-   ESTILOS GLOBALES - MODO OSCURO
-=========================== */
-
+/* ============ ESTILOS GENERALES ============ */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;  /* fondo oscuro principal */
-    margin: 0;
-    padding: 0;
-    color: #e0e0e0;  /* texto gris claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 0 auto; /* Centrado horizontal con margen automático */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    color: #333; /* Color de texto principal (gris oscuro) */
+    max-width: 1200px; /* Ancho máximo del contenido */
+}
+.status-banner,
+.login-message,
+.welcome-message {
+    margin-bottom: 20px; /* Espacio inferior */
+    padding: 15px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Fondo gris claro */
 }
 
-h1 {
-    text-align: center;
-    margin-top: 30px;
-    color: #90caf9; /* azul claro */
+.welcome-message {
+    color: #2c3e50; /* Texto azul oscuro */
 }
 
-/* ===========================
-   MENÚ DE NAVEGACIÓN
-=========================== */
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: #1e1e1e; /* gris oscuro */
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    max-width: 600px;
+.login-message {
+    color: #7f8c8d; /* Texto gris */
 }
 
-.menu li a {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: #90caf9;  /* azul claro */
-    font-weight: 600;
-    border-radius: 8px;
-    transition: background 0.3s ease, color 0.3s ease;
+.welcome .username {
+    font-weight: bold; /* Texto en negrita */
+    color: #2c3e50; /* Color azul oscuro */
+}
+.login-link,
+.login-message a,
+.return-link a {
+    color: #3498db; /* Azul brillante */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Efecto suave al pasar el mouse */
 }
 
-.menu li a:hover {
-    background-color: #37474f; /* azul grisáceo al pasar el mouse */
-    color: #ffffff;
+.login-link:hover,
+.login-message a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.nav-button,
+.return-link a {
+    display: inline-block; /* Permite padding y márgenes */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #3498db; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
 }
 
-/* ===========================
-   FORMULARIO DE LOGIN
-=========================== */
-
-.login-container {
-    width: 360px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #1e1e1e;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+.nav-button:hover,
+.return-link a:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+}
+.product-table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Bordes de celdas unidos (sin espacio) */
+    margin: 20px 0; /* Margen superior e inferior */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
-.login-container form {
-    display: flex;
-    flex-direction: column;
+.product-table th {
+    background-color: #3498db; /* Fondo azul para encabezados */
+    color: white; /* Texto blanco */
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alineación izquierda */
 }
 
-.login-container label {
-    margin-top: 15px;
-    font-size: 15px;
-    color: #bbdefb;  /* azul claro */
+.product-table td {
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Borde inferior gris */
 }
 
-.login-container input[type="text"],
-.login-container input[type="password"] {
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #546e7a;  /* borde gris-azulado */
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #263238;  /* fondo campo input */
-    color: #ffffff;
-    outline: none;
+.product-table tr:hover {
+    background-color: #f5f5f5; /* Fondo gris claro al pasar el mouse */
+}
+.price-cell,
+.price {
+    text-align: right; /* Alineación derecha (para precios) */
+    font-family: 'Courier New', monospace; /* Fuente monoespaciada (para números) */
 }
 
-.login-container input[type="submit"] {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #1565c0; /* azul medio */
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.price {
+    color: #27ae60; /* Verde para precios */
+    font-weight: bold; /* Negrita */
 }
 
-.login-container input[type="submit"]:hover {
-    background-color: #0d47a1; /* azul más oscuro al pasar mouse */
+.price-mask {
+    color: #95a5a6; /* Gris para precios ocultos */
+    letter-spacing: 2px; /* Espaciado entre caracteres (***) */
 }
 
-/* ===========================
-   RESPONSIVE (opcional)
-=========================== */
-@media (max-width: 480px) {
-    .login-container {
-        width: 90%;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
+.price-mask:hover {
+    color: #3498db; /* Azul al pasar el mouse */
+}
+.page-navigation,
+.return-link {
+    margin-top: 30px; /* Margen superior */
+    text-align: center; /* Centrado horizontal */
 }
